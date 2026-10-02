@@ -1,6 +1,3 @@
-import 'package:apple_vision_commons/src/enums/camera_facing.dart';
-import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
-
 /// Recognizes acceptable expiration date formats
 /// In plain english the steps are:
 ///  1) The month:
@@ -38,19 +35,4 @@ List<String> parseDate(String expDateStr) {
   }
 
   return match[0]!.split('/');
-}
-
-extension InputImageRotationExt on InputImageRotation {
-  ImageOrientation get appleRotation {
-    switch (this) {
-      case InputImageRotation.rotation0deg:
-        return ImageOrientation.up;
-      case InputImageRotation.rotation90deg:
-        return ImageOrientation.up;
-      case InputImageRotation.rotation180deg:
-        return ImageOrientation.down;
-      case InputImageRotation.rotation270deg:
-        return ImageOrientation.downMirrored;
-    }
-  }
 }

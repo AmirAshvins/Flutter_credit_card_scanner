@@ -1,3 +1,8 @@
+## 0.13.0
+
+### Changed
+- Text recognition runs inside this plugin. Android uses ML Kit and iOS uses Vision, so the package no longer depends on the Google ML Kit or Apple Vision Flutter plugins.
+
 ## 0.11.0
 
 
